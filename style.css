@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Verdana', Geneva, Tahoma, sans-serif;
+    font-family: 'Pacifico', cursive;
 }
 
 body {
@@ -10,102 +10,240 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(90deg, #7C4DFF, #0066FF); /* Gradient background */
-    color: rgb(4, 2, 18); /* Text color */
+    background-size: cover;
+    color: #333;
+    animation: backgroundFade 1s;
+    transition: background 0.5s;
 }
 
 .container {
     width: 40%;
     min-width: 350px;
-    background-color: white; /* White background */
+    background-color: rgba(255, 255, 255, 0.9);
     max-height: 100%;
     border-radius: 10px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4); /* Box shadow for depth */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
     padding: 20px;
     text-align: center;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s;
+    transition: background-color 0.5s, box-shadow 0.5s;
 }
 
+h1 {
+    color: #7C4DFF;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: colorPulse 2s infinite;
+    transition: color 0.5s;
+}
 
-
-
-#newtask {
-    position: relative;
-    padding: 20px;
+.add-task {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
+    transition: transform 0.5s;
 }
 
-#taskinfo {
+input[type="text"] {
     width: 75%;
-    height: 45px;
-    border: 2px solid #d1d3d8;
-    border-radius: 6px;
-    color: #111115;
-    font-weight: 400;
     padding: 10px;
-    transition: border-color 0.3s;
+    border: 2px solid #21b239;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #282b26;
+    animation: inputGlow 1s alternate infinite;
+    transition: border-color 0.5s;
 }
 
-#taskinfo:focus {
-    outline: none;
-    border-color: #030c17;
-}
-
-#add {
+button {
     width: 20%;
-    height: 45px;
-    border-radius: 5px;
-    font-weight: 500;
-    background-color: #677aea;
+    padding: 10px;
+    background-color: #7C4DFF; /* Futuristic button color */
+    color: #fff;
     border: none;
-    color: white;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 16px;
+    animation: buttonBounce 1s alternate infinite;
+    transition: background-color 0.5s, transform 0.3s, font-size 0.3s; /* Add transition effects */
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    letter-spacing: 2px; /* Increased letter spacing for a futuristic look */
 }
 
-#add:hover {
-    background-color: #4b1482; /* Darker color on hover */
+button:hover {
+    background-color: #5355eb; /* Hover color */
+    transform: scale(1.05);
+    font-size: 18px; /* Slight font size increase on hover */
 }
 
-#tasklist {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+ul {
+    list-style: none;
+    padding: 0;
 }
 
-.task {
+li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #e6f7ff; /* Lighter background color */
-    height: 55px;
-    margin-bottom: 15px;
-    padding: 15px;
-    cursor: pointer;
-    width: 100%;
-    border-radius: 8px; /* Rounder corners */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    transition: background 0.3s, transform 0.1s;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #333;
+    transition: background-color 0.3s, transform 0.2s;
+    animation: fadeIn 1s;
+    font-family: 'Orbitron', sans-serif; /* Futuristic font */
+    letter-spacing: 2px; /* Increased letter spacing for a futuristic look */
 }
 
-.task:hover {
-    background: #3d90bc; /* Slight color change on hover */
-    transform: scale(1.02); /* Slight zoom on hover */
-}
-
-.del {
-    color: #d11a2a;
-    font-size: 1.5rem;
+button.delete {
+    background-color: #FF3333;
+    color: white;
     border: none;
-    background: none;
+    border-radius: 5px;
     cursor: pointer;
-    outline: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    animation: buttonBounce 1s alternate infinite;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.del:hover {
-    color: #ff5e5e; /* Color change on hover */
+button.delete:hover {
+    background-color: #D11A2A;
+    transform: scale(1.05);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pacifico', cursive;
 }
 
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: url('C:\\Users\\Aakash Reddy\\Desktop\\intern.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    animation: backgroundFade 1s;
+}
+
+.container {
+    width: 40%;
+    min-width: 350px;
+    background-color: rgba(255, 255, 255, 0.9);
+    max-height: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 1s;
+}
+
+h1 {
+    color: #acb6bf;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    animation: colorPulse 2s infinite;
+}
+
+.add-task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    width: 75%;
+    padding: 10px;
+    border: 2px solid #21b239;
+    border-radius: 6px;
+    font-size: 18px;
+    color: #282b26;
+    animation: inputGlow 1s infinite;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    background-color: #bc6921;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    animation: buttonBounce 1s infinite;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 20px;
+    color: #333;
+    transition: background-color 0.3s;
+    animation: fadeIn 1s;
+}
+
+button.delete {
+    background-color: #FF3333; /* Change the color to a different shade of red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px; /* Reduce the font size */
+    padding: 8px 12px; /* Adjust the padding to reduce the button size */
+    animation: buttonBounce 1s infinite;
+}
+
+button.delete:hover {
+    background-color: #D11A2A;
+}
+
+
+
+/* Additional Styling */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.add-task input[type="text"]::placeholder {
+    color: #7C4DFF;
+    font-style: italic;
+}
+
+button:hover {
+    background-color: #5355eb;
+}
+
+button.delete {
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button.delete:hover {
+    background-color: #D11A2A;
+    transform: scale(1.1);
+}
